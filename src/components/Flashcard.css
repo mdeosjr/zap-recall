@@ -26,9 +26,9 @@
     align-items: flex-end;
 }
 
-.parteFrente, .parteCostas {
+.face {
     position: absolute;
-    backface-visibility: hidden;
+    backface-visibility: hidden; 
 }
 
 .parteCostas {

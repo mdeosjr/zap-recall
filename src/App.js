@@ -1,11 +1,13 @@
-import TelaInicio from "./components/TelaInicio.js"
-import Flashcards from "./components/Flashcards.js"
+import {useState} from 'react';
+import TelaInicio from "./components/TelaInicio.js";
+import Flashcards from "./components/Flashcards.js";
 
 export default function App() {
+    const [pagina, setPagina] = useState('telaInicio')
+
     return (
         <>
-            <TelaInicio/>
-            <Flashcards/>
+            {(pagina === 'telaInicio') ? <TelaInicio setPagina={setPagina}/> : <Flashcards/>}
         </>
     )
 }
