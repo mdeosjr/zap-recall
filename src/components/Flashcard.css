@@ -1,24 +1,30 @@
 .flashcard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background: #FFFFFF;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
     border-radius: 12px;
 
     width: 392px;
     height: 575.75px;
-    padding: 12px;
-
-    transform-style: preserve-3d;
-    transition: transform 0.8s;
+    
     position: relative;
 }
 
-.flashcard:active { 
-    transform: rotateY(180deg);
+.parteFrente, .parteCostas {
+    position: absolute;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+
+    padding: 12px;
 }
 
-.flashcard .parteFrente {
-    width: 94%;
-    height: 95%;
+.parteFrente {
+    width: 100%;
+    height: 100%;
     
     display: flex;
     flex-direction: column;
@@ -26,13 +32,23 @@
     align-items: flex-end;
 }
 
-.face {
-    position: absolute;
-    backface-visibility: hidden; 
-}
-
 .parteCostas {
     transform: rotateY(180deg);
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.parteFrente.selecionado {
+    transform: rotateY(-180deg);
+}
+
+.parteCostas.selecionado {
+    transform: rotateY(0deg)
 }
 
 .virarCarta {
@@ -42,12 +58,94 @@
 
 .pergunta {
     font: bold 28px Roboto;
-    
     line-height: 33px;
-
+    
     margin: 0 auto;
 }
 
 .contador {
     font: normal 18px Roboto;
+}
+
+.header {
+    display: flex;
+}
+
+.titulo {
+    font: bold 12px Roboto;
+    line-height: 14px;
+}
+
+.resposta {
+    font: normal 16px Roboto;
+    line-height: 19px;
+    
+    margin: 0 auto;
+}
+
+.opcoes {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.neutro, .incorreto, .correto, .corretoEsforco {
+    width: 65px;
+    height: 48px;
+    padding: 14px;
+    border-radius: 12px;
+
+    font: normal 10px Roboto;
+    line-height: 12px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.neutro {
+    border: 3px solid #000000;
+}
+
+.incorreto {
+    border: 3px solid #F74848;
+}
+
+.correto {
+    border: 3px solid #FFEF61;
+    font: bold 10px Roboto;
+}
+
+.corretoEsforco {
+    border: 3px solid #62DB38;
+}
+
+.flashcard.neutro,
+.flashcard.incorreto,
+.flashcard.correto,
+.flashcard.corretoEsforco {
+    width: 392px;
+    height: 575.75px;
+}
+
+.flashcard.neutro {
+    border: 5px solid #000000;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.flashcard.incorreto {
+    border: 5px solid #F64848;
+    box-shadow: 0px 8px 24px rgba(246, 72, 72, 0.12);
+}
+
+.flashcard.correto {
+    border: 5px solid #FFEF61;
+    box-shadow: 0px 8px 24px rgba(255, 239, 97, 0.12);
+}
+
+.flashcard.corretoEsforco {
+    border: 5px solid #62DB38;
+    box-shadow: 0px 8px 24px rgba(98, 219, 56, 0.12);
 }
