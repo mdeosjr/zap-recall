@@ -9,6 +9,9 @@
 
     width: 392px;
     height: 575.75px;
+
+    transform-style: preserve-3d;
+    transition: transform 1s;
     
     position: relative;
 }
@@ -16,8 +19,6 @@
 .parteFrente, .parteCostas {
     position: absolute;
     backface-visibility: hidden;
-    transform-style: preserve-3d;
-    transition: transform 1s;
 
     padding: 12px;
 }
@@ -131,21 +132,21 @@
 }
 
 .flashcard.neutro {
-    border: 5px solid #000000;
+    outline: 5px solid #000000;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .flashcard.incorreto {
-    border: 5px solid #F64848;
+    outline: 5px solid #F64848;
     box-shadow: 0px 8px 24px rgba(246, 72, 72, 0.12);
 }
 
 .flashcard.correto {
-    border: 5px solid #FFEF61;
+    outline: 5px solid #FFEF61;
     box-shadow: 0px 8px 24px rgba(255, 239, 97, 0.12);
 }
 
 .flashcard.corretoEsforco {
-    border: 5px solid #62DB38;
+    outline: 5px solid #62DB38;
     box-shadow: 0px 8px 24px rgba(98, 219, 56, 0.12);
 }

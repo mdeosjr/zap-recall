@@ -7,8 +7,7 @@ export default function App() {
 
     return (
         <>
-            {/* {(pagina === 'telaInicio') ? <TelaInicio setPagina={setPagina}/> : <Flashcards/>} */}
-            <Flashcards/>
+            {(pagina === 'telaInicio') ? <TelaInicio setPagina={setPagina}/> : <Flashcards/>}
         </>
     )
 }

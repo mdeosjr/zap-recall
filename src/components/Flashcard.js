@@ -3,12 +3,10 @@ import {useState} from 'react';
 import botaoVirar from "../assets/turn.png";
 import "./Flashcard.css";
 
-export default function Flashcard({pergunta, resposta, setCarta, carta, tamanhoDeck}) {
+export default function Flashcard({pergunta, resposta, setCarta, carta, tamanhoDeck, resultado, setResultado}) {
     const [opcao, setOpcao] = useState('');
     const [classe, setClasse] = useState('opcoes');
     const [selecionado, setSelecionado] = useState('')
-    const [resultado, setResultado] = useState(0)
-    const [finalizar, setFinalizar] = useState(false)
 
     function escolhaDeOpcao(opcao) {
         setOpcao(opcao);
@@ -27,19 +25,10 @@ export default function Flashcard({pergunta, resposta, setCarta, carta, tamanhoD
         setClasse('opcoes');
         setOpcao('');
         setSelecionado('')
-        if (carta+1 === tamanhoDeck) {
-            setFinalizar(true);
-            console.log('oi')
-        }
     }
-
-    // function renderizarFinal(resultado) {
-    //     {(resultado !== 0) ? <TelaFracasso/> : <TelaSucesso/>}
-    // }
 
     return (
         <>
-         {(finalizar) ? <h1>Hello World</h1> : 
             <div className={`flashcard ${opcao}`}>
                 <div className={`parteFrente ${selecionado}`}>
                     <span className="contador">{carta+1}/{tamanhoDeck}</span>
@@ -64,7 +53,6 @@ export default function Flashcard({pergunta, resposta, setCarta, carta, tamanhoD
                     }
                 </div>
             </div>
-         }
         </>
     )
 }
