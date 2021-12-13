@@ -1,9 +1,9 @@
 import {useState} from 'react';
 
-import logomini from '../assets/logo-mini.png';
-import Flashcard from "./Flashcard.js";
-import TelaFinalizar from './TelaFinalizar';
-import "./Flashcards.css";
+import logomini from '../../assets/logo-mini.png';
+import Flashcard from '../Flashcard';
+import TelaFinalizar from '../TelaFinalizar';
+import "./style.css";
 
 export default function Flashcards() {
     const [carta, setCarta] = useState(0);
@@ -22,7 +22,9 @@ export default function Flashcards() {
 
     const tamanhoDeck = deck.length;
 
-    const deckJSX = deck.map(card => <Flashcard resultado={resultado} setResultado={setResultado} carta={carta} setCarta={setCarta} tamanhoDeck={tamanhoDeck} {...card}/>)
+    const deckJSX = deck.map(card => 
+        <Flashcard resultado={resultado} setResultado={setResultado} carta={carta} setCarta={setCarta} tamanhoDeck={tamanhoDeck} {...card}/>
+    )
 
     return (
         <>

@@ -1,5 +1,5 @@
-import './Reiniciar.css';
-import proximo from '../assets/next.png'
+import './style.css';
+import proximo from '../../assets/next.png'
 
 export default function Reiniciar() {
     function reiniciar() {

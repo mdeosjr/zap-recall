@@ -1,6 +1,6 @@
-import logotipo from '../assets/logo.png'
-import proximo from '../assets/next.png'
-import "./TelaInicio.css"
+import logotipo from '../../assets/logo.png'
+import proximo from '../../assets/next.png'
+import "./style.css"
 
 export default function TelaInicio({setPagina}) {
     return (

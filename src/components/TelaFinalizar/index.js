@@ -1,7 +1,7 @@
-import emojiFeliz from '../assets/party.png';
-import emojiTriste from '../assets/sad.png';
-import "./TelaFinalizar.css";
-import Reiniciar from"./Reiniciar.js";
+import emojiFeliz from '../../assets/party.png';
+import emojiTriste from '../../assets/sad.png';
+import "./style.css";
+import Reiniciar from "../Reiniciar";
 
 export default function TelaFinalizar({resultado}) {
     return (

@@ -1,7 +1,7 @@
 import {useState} from 'react';
-import Opcoes from './Opcoes.js';
-import botaoVirar from "../assets/turn.png";
-import "./Flashcard.css";
+import Opcoes from '../Opções';
+import botaoVirar from "../../assets/turn.png";
+import "./style.css";
 
 export default function Flashcard({pergunta, resposta, setCarta, carta, tamanhoDeck, resultado, setResultado}) {
     const [opcao, setOpcao] = useState('');

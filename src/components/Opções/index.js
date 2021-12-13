@@ -1,4 +1,4 @@
-import './Opcoes.css';
+import './style.css';
 
 export default function Opcoes({setOpcao, setClasse, setResultado, resultado}) {
     function escolhaDeOpcao(opcao) {
