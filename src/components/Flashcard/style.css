@@ -17,7 +17,7 @@
     position: absolute;
     backface-visibility: hidden;
     transform-style: preserve-3d;
-    transition: transform 1s;
+    transition: transform 0.7s;
 
     padding: 16px;
 
@@ -35,6 +35,7 @@
 }
 
 .parteCostas {
+    visibility: hidden;
     transform: rotateY(180deg);
     height: 100%;
     width: 100%;
@@ -50,6 +51,7 @@
 }
 
 .parteCostas.selecionado {
+    visibility: inherit;
     transform: rotateY(0deg)
 }
 
