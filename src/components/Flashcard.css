@@ -10,17 +10,18 @@
     width: 392px;
     height: 575.75px;
 
-    transform-style: preserve-3d;
-    transition: transform 1s;
-    
     position: relative;
 }
 
 .parteFrente, .parteCostas {
     position: absolute;
     backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 1s;
 
-    padding: 12px;
+    padding: 16px;
+
+    text-align: center;
 }
 
 .parteFrente {
@@ -41,7 +42,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .parteFrente.selecionado {
@@ -55,98 +56,37 @@
 .virarCarta {
     width: 40px;
     height: 35px;
+
+    cursor: pointer;
 }
 
 .pergunta {
     font: bold 28px Roboto;
     line-height: 33px;
     
-    margin: 0 auto;
+    margin: auto;
 }
 
 .contador {
     font: normal 18px Roboto;
-}
-
-.header {
-    display: flex;
+    
+    position: fixed;
 }
 
 .titulo {
     font: bold 12px Roboto;
     line-height: 14px;
+    
+    width: 100%;
+    padding: 5px 0;
+
+    display: flex;
+    justify-content: center;
 }
 
 .resposta {
     font: normal 16px Roboto;
     line-height: 19px;
-    
+
     margin: 0 auto;
-}
-
-.opcoes {
-    width: 100%;
-
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.neutro, .incorreto, .correto, .corretoEsforco {
-    width: 65px;
-    height: 48px;
-    padding: 14px;
-    border-radius: 12px;
-
-    font: normal 10px Roboto;
-    line-height: 12px;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.neutro {
-    border: 3px solid #000000;
-}
-
-.incorreto {
-    border: 3px solid #F74848;
-}
-
-.correto {
-    border: 3px solid #FFEF61;
-    font: bold 10px Roboto;
-}
-
-.corretoEsforco {
-    border: 3px solid #62DB38;
-}
-
-.flashcard.neutro,
-.flashcard.incorreto,
-.flashcard.correto,
-.flashcard.corretoEsforco {
-    width: 392px;
-    height: 575.75px;
-}
-
-.flashcard.neutro {
-    outline: 5px solid #000000;
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-.flashcard.incorreto {
-    outline: 5px solid #F64848;
-    box-shadow: 0px 8px 24px rgba(246, 72, 72, 0.12);
-}
-
-.flashcard.correto {
-    outline: 5px solid #FFEF61;
-    box-shadow: 0px 8px 24px rgba(255, 239, 97, 0.12);
-}
-
-.flashcard.corretoEsforco {
-    outline: 5px solid #62DB38;
-    box-shadow: 0px 8px 24px rgba(98, 219, 56, 0.12);
 }

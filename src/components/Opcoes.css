@@ -1,0 +1,71 @@
+.opcoes {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.neutro,
+.incorreto,
+.correto,
+.corretoEsforco {
+    width: 65px;
+    height: 48px;
+    padding: 14px;
+    border-radius: 12px;
+
+    font: normal 10px Roboto;
+    line-height: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.neutro {
+    border: 3px solid #000000;
+}
+
+.incorreto {
+    border: 3px solid #F74848;
+}
+
+.correto {
+    border: 3px solid #FFEF61;
+    font: bold 10px Roboto;
+}
+
+.corretoEsforco {
+    border: 3px solid #62DB38;
+}
+
+.flashcard.neutro,
+.flashcard.incorreto,
+.flashcard.correto,
+.flashcard.corretoEsforco {
+    width: 392px;
+    height: 575.75px;
+}
+
+.flashcard.neutro {
+    border: 5px solid #000000;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.flashcard.incorreto {
+    border: 5px solid #F64848;
+    box-shadow: 0px 8px 24px rgba(246, 72, 72, 0.12);
+}
+
+.flashcard.correto {
+    border: 5px solid #FFEF61;
+    box-shadow: 0px 8px 24px rgba(255, 239, 97, 0.12);
+}
+
+.flashcard.corretoEsforco {
+    border: 5px solid #62DB38;
+    box-shadow: 0px 8px 24px rgba(98, 219, 56, 0.12);
+}
