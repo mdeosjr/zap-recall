@@ -25,7 +25,7 @@ export default function Flashcard({pergunta, resposta, setCarta, carta, tamanhoD
                 <div className={`parteFrente ${selecionado}`}>
                     <span className="contador" data-identifier="counter">{carta+1}/{tamanhoDeck}</span>
                     <span className="pergunta">{pergunta}</span>
-                    <img className="virarCarta" data-identifier="arrow" onClick={respostaCarta} src={botaoVirar} alt=""></img>
+                    <img className="virarCarta" data-identifier="arrow" onClick={respostaCarta} src={botaoVirar} alt="Botão próximo"></img>
                 </div>
                 <div className={`parteCostas ${selecionado}`}>
                     <span className="titulo">{pergunta}</span>
@@ -34,7 +34,7 @@ export default function Flashcard({pergunta, resposta, setCarta, carta, tamanhoD
                     {(classe === 'opcoes') ? 
                         <Opcoes setOpcao={setOpcao} setClasse={setClasse} setResultado={setResultado} resultado={resultado}/>
                         : 
-                        <img className="virarCarta" data-identifier="arrow" onClick={proximaCarta} src={botaoVirar} alt=""></img>
+                        <img className="virarCarta" data-identifier="arrow" onClick={proximaCarta} src={botaoVirar} alt="Botão próximo"></img>
                     }
                 </div>
             </div>

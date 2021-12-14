@@ -6,7 +6,7 @@ export default function TelaInicio({setPagina}) {
     return (
         <div className="telaInicio">
             <div className="logotipo">
-                <img src={logotipo} alt=""></img>
+                <img src={logotipo} alt="Logo ZapRecall"></img>
             </div>
             <div className="botaoIniciar" data-identifier="start-zap-recall" onClick={() => setPagina('flashcards')}>
                 <span>Praticar React</span>
